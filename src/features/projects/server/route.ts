@@ -76,10 +76,11 @@ const app = new Hono()
       if (!member) {
         return c.json({ error: "Unauthorized" }, 401);
       }
-      const projects = await databases.listDocuments(DATABASE_ID, PROJECTS_ID, [
-        Query.equal("workspaceId", workspaceId),
-        Query.orderDesc("$createdAt"),
-      ]);
+      const projects = await databases.listDocuments<Project>(
+        DATABASE_ID,
+        PROJECTS_ID,
+        [Query.equal("workspaceId", workspaceId), Query.orderDesc("$createdAt")]
+      );
       return c.json({ data: projects });
     }
   )
@@ -221,10 +222,10 @@ const app = new Hono()
       DATABASE_ID,
       TASKS_ID,
       [
-        // Query.equal("projectId", projectId),
+        Query.equal("projectId", projectId),
         Query.equal("assigneeId", member.$id),
-        // Query.greaterThanEqual("$createdAt", thisMonthStart.toISOString()),
-        // Query.lessThanEqual("$createdAt", thisMonthEnd.toISOString()),
+        Query.greaterThanEqual("$createdAt", thisMonthStart.toISOString()),
+        Query.lessThanEqual("$createdAt", thisMonthEnd.toISOString()),
       ]
     );
     const lastMonthAssignedTasks = await databases.listDocuments(
