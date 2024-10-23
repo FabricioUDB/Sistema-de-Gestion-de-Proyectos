@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 import { UserButton } from "@/features/auth/components/user-button";
 import { MobileSidebar } from "./mobile-sidebar";
+import { ThemeSwitcher } from "./theme-switcher";
 
 const pathnameMap = {
   tasks: {
@@ -24,13 +25,16 @@ export const Navbar = () => {
   const pathnameKey = pathnameParts[3] as keyof typeof pathnameMap;
   const { title, description } = pathnameMap[pathnameKey] || defaultMap;
   return (
-    <nav className="pt-4 px-6 flex items-center justify-between">
+    <nav className="pt-4 px-6 flex items-center dark:bg-[#161617] justify-between">
       <div className="flex-col hidden lg:flex">
         <h1 className="text-2xl font-semibold">{title}</h1>
         <p className="text-muted-foreground">{description}</p>
       </div>
       <MobileSidebar />
-      <UserButton />
+      <div className="flex items-center space-x-12"> 
+        <ThemeSwitcher />
+        <UserButton />
+      </div>
     </nav>
   );
 };

@@ -68,7 +68,7 @@ export const EditTaskForm = ({
   };
 
   return (
-    <Card className="w-full h-full border-none shadow-none">
+    <Card className="w-full h-full border-none  dark:bg-[#1C1C1C] shadow-none">
       <CardHeader className="flex p-7">
         <CardTitle className="text-xl font-bold">Edit a task</CardTitle>
       </CardHeader>
@@ -98,7 +98,7 @@ export const EditTaskForm = ({
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Due Date</FormLabel>
-                    <FormControl>
+                    <FormControl className="dark:bg-[#1C1C1C]">
                       <DatePicker {...field} />
                     </FormControl>
                     <FormMessage />

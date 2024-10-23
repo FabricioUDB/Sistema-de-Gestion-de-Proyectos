@@ -63,7 +63,7 @@ export const CreateTaskForm = ({
   };
 
   return (
-    <Card className="w-full h-full border-none shadow-none">
+    <Card className="w-full h-full border-none shadow-none  dark:bg-[#1C1C1C]">
       <CardHeader className="flex p-7">
         <CardTitle className="text-xl font-bold">Create a new task</CardTitle>
       </CardHeader>
@@ -92,8 +92,8 @@ export const CreateTaskForm = ({
                 name="dueDate"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Due Date</FormLabel>
-                    <FormControl>
+                    <FormLabel  >Due Date</FormLabel>
+                    <FormControl className="dark:bg-[#1C1C1C]">
                       <DatePicker {...field} />
                     </FormControl>
                     <FormMessage />

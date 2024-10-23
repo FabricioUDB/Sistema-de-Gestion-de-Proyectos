@@ -141,7 +141,7 @@ export const DataKanban = ({ data, onChange }: DataKanbanProps) => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <div className="flex overflow-x-auto">
+      <div className="flex overflow-x-auto dark:bg-[#1C1C1D]">
         {boards.map((board) => {
           return (
             <div

@@ -65,7 +65,7 @@ export const CreateProjectForm = ({ onCancel }: CreateProjectFormProps) => {
   };
 
   return (
-    <Card className="w-full h-full border-none shadow-none">
+    <Card className="w-full h-full border-none shadow-none dark:bg-[#1C1C1C]">
       <CardHeader className="flex p-7">
         <CardTitle className="text-xl font-bold">
           Create a new project
@@ -176,7 +176,8 @@ export const CreateProjectForm = ({ onCancel }: CreateProjectFormProps) => {
               >
                 Cancel
               </Button>
-              <Button disabled={isPending} type="submit" size="lg">
+              <Button disabled={isPending} type="submit" size="lg"
+              >
                 Create Project
               </Button>
             </div>

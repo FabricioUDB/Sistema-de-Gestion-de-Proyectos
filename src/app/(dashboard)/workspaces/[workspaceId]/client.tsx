@@ -48,7 +48,7 @@ export const WorkspaceIdClient = () => {
     return <PageError message="Failed to load workspace data" />;
   }
   return (
-    <div className="h-full flex flex-col space-y-4">
+    <div className="h-full flex flex-col space-y-4 ">
       <Analytics data={analytics} />
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
         <TaskList data={tasks.documents} total={tasks.total} />
@@ -73,7 +73,7 @@ export const TaskList = ({ data, total }: TaskListProps) => {
         <div className="flex items-center justify-between">
           <p className="text-lg font-semibold">Tasks ({total})</p>
           <Button variant="muted" size="icon" onClick={createTask}>
-            <PlusIcon className="size-4 text-neutral-400" />
+            <PlusIcon className="size-4 text-neutral-500 dark:text-neutral-300 cursor-pointer hover:opacity-75 dark:hover:opacity-75 transition" />
           </Button>
         </div>
         <DottedSeparator className="my-4" />
@@ -81,8 +81,8 @@ export const TaskList = ({ data, total }: TaskListProps) => {
           {data.map((task) => (
             <li key={task.$id}>
               <Link href={`/workspaces/${workspaceId}/tasks/${task.$id}`}>
-                <Card className="shadow-none rounded-lg hover:opacity-75 transition">
-                  <CardContent className="p-4">
+                <Card className="shadow-none rounded-xl hover:opacity-75 transition ">
+                  <CardContent className="p-4 dark:bg-[#1C1C1C] dark:border dark:border-[#404040] dark:rounded-xl">
                     <p className="text-lg font-medium truncate">{task.name}</p>
                     <div className="flex items-center gap-x-2">
                       <p>{task.project?.name}</p>
@@ -121,11 +121,11 @@ export const ProjectList = ({ data, total }: ProjectListProps) => {
 
   return (
     <div className="flex flex-col gap-y-4 col-span-1">
-      <div className="bg-white border rounded-lg p-4">
-        <div className="flex items-center justify-between">
+      <div className="bg-white border rounded-lg p-4 dark:bg-[#262626]">
+        <div className="flex items-center justify-between ">
           <p className="text-lg font-semibold">Projects ({total})</p>
-          <Button variant="secondary" size="icon" onClick={createProject}>
-            <PlusIcon className="size-4 text-neutral-400" />
+          <Button variant="muted" size="icon" onClick={createProject}>
+          <PlusIcon className="size-4 text-neutral-500 dark:text-neutral-400 cursor-pointer hover:opacity-75 dark:hover:opacity-90 transition" />
           </Button>
         </div>
         <DottedSeparator className="my-4" />
@@ -133,7 +133,7 @@ export const ProjectList = ({ data, total }: ProjectListProps) => {
           {data.map((project) => (
             <li key={project.$id}>
               <Link href={`/workspaces/${workspaceId}/projects/${project.$id}`}>
-                <Card className="shadow-none rounded-lg hover:opacity-75 transition">
+                <Card className="shadow-none rounded-lg hover:opacity-75 transition dark:bg-[#1C1C1C] dark:border dark:border-[#404040] dark:rounded-xl">
                   <CardContent className="p-4 flex items-center gap-x-2.5">
                     <ProjectAvatar
                       className="size-12"
@@ -166,11 +166,11 @@ export const MemberList = ({ data, total }: MembersListProps) => {
   const workspaceId = useWorkspaceId();
 
   return (
-    <div className="flex flex-col gap-y-4 col-span-1">
-      <div className="bg-white border rounded-lg p-4">
+    <div className="flex flex-col gap-y-4 col-span-1 ">
+      <div className="bg-white border rounded-lg p-4 dark:bg-[#262626]">
         <div className="flex items-center justify-between">
           <p className="text-lg font-semibold">Members ({total})</p>
-          <Button variant="secondary" size="icon" asChild>
+          <Button variant="muted" size="icon" asChild>
             <Link href={`/workspaces/${workspaceId}/members`}>
               <SettingsIcon className="size-4 text-neutral-400" />
             </Link>
@@ -180,7 +180,7 @@ export const MemberList = ({ data, total }: MembersListProps) => {
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {data.map((member) => (
             <li key={member.$id}>
-              <Card className="shadow-none rounded-lg overflow-hidden">
+              <Card className="shadow-none rounded-lg hover:opacity-75 transition dark:bg-[#1C1C1C] dark:border dark:border-[#404040] dark:rounded-xl">
                 <CardContent className="p-3 flex flex-col items-center gap-x-2">
                   <MemberAvatar className="size-12" name={member.name} />
                   <div className="flex flex-col items-center overflow-hidden">

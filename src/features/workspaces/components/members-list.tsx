@@ -53,7 +53,7 @@ export const MembersList = () => {
     );
   };
   return (
-    <Card className="w-full h-full border-none shadow-none">
+    <Card className="w-full h-full shadow-none  dark:bg-[#1C1C1C] dark:border dark:border-[#404040]">
       <ConfirmDialog />
       <CardHeader className="flex flex-row items-center gap-x-4 p-7 space-y-0">
         <Button asChild variant="secondary" size="sm">

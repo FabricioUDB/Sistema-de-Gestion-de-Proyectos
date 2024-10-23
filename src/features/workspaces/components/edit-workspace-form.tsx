@@ -107,10 +107,10 @@ export const EditWorkspaceForm = ({
       .then(() => toast.success("Invite link copied to clipboard"));
   };
   return (
-    <div className="flex flex-col gap-y-4">
+    <div className="flex flex-col gap-y-4 ">
       <DeleteDialog />
       <ResetDialog />
-      <Card className="w-full h-full border-none shadow-none">
+      <Card className="w-full h-full  shadow-none dark:bg-[#1C1C1C] dark:border dark:border-[#404040]">
         <CardHeader className="flex flex-row items-center gap-x-4 p-7 space-y-0">
           <Button
             size="sm"
@@ -241,7 +241,7 @@ export const EditWorkspaceForm = ({
           </Form>
         </CardContent>
       </Card>
-      <Card className="w-full h-full border-none shadow-none">
+      <Card className="w-full h-full shadow-none dark:bg-[#1C1C1C] dark:border dark:border-[#404040]">
         <CardContent className="p-7">
           <div className="flex flex-col">
             <h3 className="font-bold">Invite Members</h3>
@@ -250,7 +250,8 @@ export const EditWorkspaceForm = ({
             </p>
             <div className="mt-4">
               <div className="flex items-center gap-x-2">
-                <Input disabled value={fullInviteLink} />
+                <Input disabled value={fullInviteLink}   className=" dark:bg-neutral-800 dark:text-neutral-400 dark:border-neutral-700 disabled:opacity-50"
+                />
                 <Button
                   onClick={handleCopyInviteLink}
                   variant="secondary"
@@ -274,7 +275,7 @@ export const EditWorkspaceForm = ({
           </div>
         </CardContent>
       </Card>
-      <Card className="w-full h-full border-none shadow-none">
+      <Card className="w-full h-full shadow-none dark:bg-[#1C1C1C] dark:border dark:border-[#404040]">
         <CardContent className="p-7">
           <div className="flex flex-col">
             <h3 className="font-bold">Danger Zone</h3>

@@ -6,7 +6,7 @@ const WorkspaceIdSettingsPage = async () => {
   const user = await getCurrent();
   if (!user) redirect("/sign-in");
 
-  return <WorkspaceIdSettingsClient />;
+  return <WorkspaceIdSettingsClient/>;
 };
 
 export default WorkspaceIdSettingsPage;

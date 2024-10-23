@@ -16,7 +16,7 @@ export const WorkspaceIdSettingsClient = () => {
     return <PageError message="Project not found" />;
   }
   return (
-    <div className="w-full lg:max-w-xl">
+    <div className="w-full lg:max-w-xl  ">
       <EditWorkspaceForm initialValues={initialValues} />
     </div>
   );

@@ -86,9 +86,9 @@ export const EditProjectForm = ({
   };
 
   return (
-    <div className="flex flex-col gap-y-4">
+    <div className="flex flex-col gap-y-4 ">
       <DeleteDialog />
-      <Card className="w-full h-full border-none shadow-none">
+      <Card className="w-full h-full shadow-none dark:bg-[#1C1C1C] dark:border dark:border-[#404040]">
         <CardHeader className="flex flex-row items-center gap-x-4 p-7 space-y-0">
           <Button
             size="sm"
@@ -223,7 +223,7 @@ export const EditProjectForm = ({
         </CardContent>
       </Card>
 
-      <Card className="w-full h-full border-none shadow-none">
+      <Card className="w-full h-full dark:bg-[#1C1C1C] dark:border dark:border-[#404040] shadow-none">
         <CardContent className="p-7">
           <div className="flex flex-col">
             <h3 className="font-bold">Danger Zone</h3>
