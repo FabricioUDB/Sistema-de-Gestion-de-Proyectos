@@ -9,7 +9,7 @@ type ResponseType = InferResponseType<
 >;
 type RequestType = InferRequestType<(typeof client.api.auth.register)["$post"]>;
 
-export const userRegister = () => {
+export const useUserRegister = () => {
   const queryClient = useQueryClient();
   const router = useRouter();
   const mutation = useMutation<ResponseType, Error, RequestType>({

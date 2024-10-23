@@ -24,10 +24,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { registerSchema } from "../schemas";
-import { userRegister } from "../api/use-register";
+import { useUserRegister } from "../api/use-register";
 
 export const SignUpCard = () => {
-  const { mutate, isPending } = userRegister();
+  const { mutate, isPending } = useUserRegister();
   const form = useForm<z.infer<typeof registerSchema>>({
     resolver: zodResolver(registerSchema),
     defaultValues: {
