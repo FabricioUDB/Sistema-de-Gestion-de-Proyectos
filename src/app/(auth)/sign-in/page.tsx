@@ -7,7 +7,7 @@ const SignInPage = async () => {
   console.log({ user });
   if (user) redirect("/");
   return (
-    <div>
+    <div >
       <SignInCard />
     </div>
   );

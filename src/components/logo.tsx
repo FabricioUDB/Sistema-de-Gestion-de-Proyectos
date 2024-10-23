@@ -1,10 +1,14 @@
 "use client";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export const Logo = () => {
-  const { theme } = useTheme();
+  const {  resolvedTheme } = useTheme();
+  const [fillColor, setFillColor] = useState("#340E0E");
 
-  const fillColor = theme === "dark" ? "#FFFFFF" : "#340E0E";
+  useEffect(() => {
+    setFillColor(resolvedTheme === "dark" ? "#FFFFFF" : "#340E0E");
+  }, [resolvedTheme]);
 
   return (
     <svg id="logo-54" width="170" height="41" viewBox="0 0 170 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,5 +25,3 @@ export const Logo = () => {
     </svg>
   );
 };
-
-
