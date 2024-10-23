@@ -1,6 +1,5 @@
 import { Logo } from "@/components/logo";
 import { UserButton } from "@/features/auth/components/user-button";
-import Image from "next/image";
 import Link from "next/link";
 
 interface StandloneLayoutProps {
