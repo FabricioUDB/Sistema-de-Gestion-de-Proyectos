@@ -19,5 +19,5 @@ export async function GET(request: NextRequest) {
     sameSite: "strict",
     secure: true,
   });
-  return NextResponse.redirect(`${process.env.NEXT_PUBLIC_APP}/`);
+  return NextResponse.redirect(`${request.nextUrl.origin}/`);
 }
