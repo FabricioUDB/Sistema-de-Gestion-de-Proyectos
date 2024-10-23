@@ -22,38 +22,11 @@
 ¡A continuación puedes ver una vista previa de la aplicación! No olvides añadir tus propias imágenes aquí para mostrar cómo luce:
 
   
-
-![Adri Tasks - Captura](https://cloud.appwrite.io/v1/storage/buckets/670ec39e0028f7dbcce7/files/6719646f002728ae3edf/view?project=670b70f8003c79dae435&project=670b70f8003c79dae435&mode=admin)
-
-  
-
----
-
-  
-
-## 📋 Tabla de Contenidos
-
-  
-
-- [Instalación](#instalación)
-
-- [Características](#características)
-
-- [Tecnologías](#tecnologías)
-
-- [Uso](#uso)
-
-- [Estructura de Carpetas](#estructura-de-carpetas)
-
-- [Despliegue](#despliegue)
-
-- [Licencia](#licencia)
+<img src="https://i.ibb.co/NKcspXz/Captura-de-pantalla-2024-10-23-160131.png" alt="Adri Tasks" style="width: 100%; height: auto;" />
 
   
 
 ---
-
-  
 
 
 ## ⚙️ Instalación
