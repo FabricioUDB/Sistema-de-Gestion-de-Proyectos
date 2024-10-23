@@ -3,13 +3,13 @@ import { DottedSeparator } from "./dotted-separator";
 import { Navigation } from "./navigation";
 import { WorkspaceSwitcher } from "./workspace-switcher";
 import { Projects } from "./projects";
-import { Logo } from "./logo";
+import Image from "next/image";
 
 export const Sidebar = () => {
   return (
     <aside className="h-full bg-neutral-100 p-4 w-full dark:bg-[#1C1C1C]">
       <Link href="/">
-        <Logo />
+      <Image src="/logo.svg" alt="logo" width={164} height={48} />
       </Link>
       <DottedSeparator className="my-4" />
       <WorkspaceSwitcher />
