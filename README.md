@@ -1,168 +1,88 @@
 
-# 🎯 Adri Tasks - Aplicación de Gestión de Tareas
+🚀 Gestión Inteligente de Tareas
+✨ Transforma tu productividad con una solución moderna y eficiente
 
-  
+Este es un proyecto de gestion de proyectos para cual quier actividad o tarea que tengas en mente.
 
-**Adri Tasks** es una poderosa aplicación de gestión de tareas construida con Next.js, diseñada para ayudarte a organizar y priorizar tu trabajo de manera eficiente. Con una interfaz moderna y fácil de usar, ¡mejora tu productividad ahora! 🚀
+🌐 Demo en Vivo https://next-track-three-azure.vercel.app/sign-in
 
-  
+📌 Vista Previa
+Captura de Pantalla
+Recomendación: Usa herramientas como Shots.so para crear imágenes atractivas de tu app.
 
-🌐 **[Aplicación Desplegada Aquí](https://next-track-three.vercel.app/)**
+🔥 Características Principales
+✅ Tareas Inteligentes: Priorización automática con IA (opcional, si aplica).
 
-  
+🔄 Sincronización en Tiempo Real: Trabaja sin conexión y se actualiza al reconectar.
 
----
+📊 Dashboard Personalizado: Métricas de productividad con gráficos interactivos.
 
-  
+🔐 Seguridad Avanzada: Autenticación con 2FA y cifrado de extremo a extremo.
 
-## 📸 Capturas de Pantalla
+🌍 Multiplataforma: Accede desde web, móvil o como PWA.
 
-  
+(Personaliza esta lista con tus features únicas)
 
-¡A continuación puedes ver una vista previa de la aplicación! No olvides añadir tus propias imágenes aquí para mostrar cómo luce:
+🛠️ Tecnologías Clave
+Área	Tecnologías Usadas
+Frontend	Next.js 14, React 18, TypeScript 5
+Estilos	Tailwind CSS + CSS Modules
+Backend	Appwrite, Node.js
+Base de Datos	MongoDB (via Appwrite)
+Deployment	Vercel, Docker
+⚡ Instalación Rápida
+bash
+Copy
+git clone https://github.com/FabricioUDB/Sistema-de-Gestion-de-Proyectos.git 
+cd tu-repositorio  
+npm install  
+npm run dev
+🔧 Configuración Requerida:
 
-  
-<img src="https://i.ibb.co/NKcspXz/Captura-de-pantalla-2024-10-23-160131.png" alt="Adri Tasks" style="width: 100%; height: auto;" />
+Crea .env.local basado en .env.example
 
-  
+Configura tus claves de Appwrite
 
----
+Ejecuta npm run build para producción
 
+🧩 Estructura del Proyecto
+markdown
+Copy
+core/  
+├── lib/          # Lógica reusable  
+├── hooks/        # Custom Hooks  
+├── store/        # Estado global (Zustand/Redux)  
+ui/  
+├── components/   # Componentes atómicos  
+├── layouts/      # Estructuras de página  
+features/  
+├── auth/         # Flujos de autenticación  
+├── tasks/        # Lógica de tareas  
+└── analytics/    # Paneles de datos
+📈 Roadmap
+Integración con Google Calendar (Q3 2024)
 
-## ⚙️ Instalación
+App móvil nativa (Q4 2024)
 
-### Requisitos Previos
+API pública para desarrolladores (2025)
 
-- ⚡ Node.js (versión 14 o superior)
-- 📦 npm o yarn
+(Incluye tus planes futuros)
 
-### Pasos
+🤝 Contribuir
+¡Agradecemos contribuciones! Por favor:
 
-1. Clona el repositorio:
+Haz fork del proyecto
 
-   ```bash
-   git clone https://github.com/AdriALV2005/Next-Track.git
-1. Navega al directorio del proyecto::
+Crea una rama (git checkout -b feature/awesome-feature)
 
-   ```bash
-   cd Next-Track
-1. Instala las dependencias::
+Haz commit de tus cambios (git commit -m 'Add awesome feature')
 
-   ```bash
-   npm install
-1. Crea un archivo `.env.local` y configura tus variables de entorno:
+Haz push a la rama (git push origin feature/awesome-feature)
 
-   ```bash
-   NEXT_PUBLIC_APP_URL=http://localhost:3000 NEXT_PUBLIC_APPWRITE_ENDPOINT=<tu-endpoint-de-appwrite> NEXT_PUBLIC_APPWRITE_PROJECT=<tu-id-del-proyecto> NEXT_PUBLIC_APPWRITE_DATABASE_ID=<tu-id-de-la-base-de-datos> NEXT_PUBLIC_APPWRITE_WORKSPACES_ID=<tu-id-de-workspaces> NEXT_PUBLIC_APPWRITE_MEMBERS_ID=<tu-id-de-miembros> NEXT_PUBLIC_APPWRITE_PROJECTS_ID=<tu-id-de-proyectos> NEXT_PUBLIC_APPWRITE_TASKS_ID=<tu-id-de-tareas> NEXT_PUBLIC_APPWRITE_IMAGES_BUCKET_ID=<tu-id-del-bucket-de-imágenes> NEXT_APPWRITE_KEY=<tu-clave-appwrite>
-1. Ejecuta el servidor de desarrollo:
+Abre un Pull Request
 
-   ```bash
-   npm run dev
-## ✨ Características
 
-  
-
-- 🔐 **Autenticación Segura**: Inicio de sesión y registro usando correo electrónico/contraseña, con integración de OAuth (Google, GitHub).
-
-- 📝 **Gestión de Tareas**: Crea, edita y elimina tareas. Organiza tus tareas por proyecto y prioridad.
-
-- 📊 **Analíticas de Proyectos**: Visualiza estadísticas sobre tus tareas, como el total de tareas, tareas completadas, y vencidas.
-
-- 📱 **Diseño Responsivo**: Totalmente optimizado para dispositivos móviles y de escritorio.
-
-- 🌙 **Modo Oscuro**: Cambia entre modo claro y oscuro para tu preferencia visual.
-
-- 🗂️ **Gestión de Proyectos**: Administra múltiples proyectos y sus respectivas tareas.
-
-  
-
----
-
-  
-
-## 🛠️ Tecnologías
-
-  
-
--  **Next.js**: Framework de React para renderizado del lado del servidor y generación de sitios estáticos.
-
--  **React**: Librería JavaScript para construir interfaces de usuario.
-
--  **TypeScript**: Añade tipos estáticos a JavaScript para mejorar la robustez del código.
-
--  **Tailwind CSS**: Framework de CSS basado en utilidades para un desarrollo rápido de interfaces.
-
--  **React Query**: Gestión del estado y de las consultas a la API en aplicaciones React.
-
--  **Appwrite**: Servidor backend para gestionar autenticación y bases de datos.
-
--  **Lucide React Icons**: Librería de íconos.
-
-  
-
----
-
-  
-
-## 🚀 Uso
-
-  
-
-Una vez configuradas las variables de entorno e instaladas las dependencias, puedes ejecutar la aplicación en modo desarrollo o producción, utilizando los comandos adecuados.
-
-  
-
-### Autenticación
-
-  
-
-La aplicación soporta autenticación con Google y GitHub utilizando OAuth, además del registro tradicional con correo electrónico y contraseña.
-
-  
-
-### Analíticas
-
-  
-
-Cada espacio de trabajo y proyecto tiene un panel de analíticas que muestra datos clave como:
-
-  
-
-- 📊 Total de tareas
-
-- 👤 Tareas asignadas
-
-- ✅ Tareas completadas
-
-- ⏰ Tareas vencidas
-
-  
-
----
-
-  
-
-## 🗂️ Estructura de Carpetas
-
-  
-
-La estructura del proyecto sigue un diseño modular que facilita el desarrollo y mantenimiento.
-
-```
-├── components
-│   ├── analytics/
-│   ├── auth/
-│   ├── dashboard/
-│   ├── tasks/
-│   └── ui/
-├── features
-│   ├── auth/
-│   ├── members/
-│   ├── projects/
-│   └── tasks/
-├── pages
-│   ├── api/
-│   ├── dashboard/
-│   └── sign-in/
-├── public/
-└── styles/
+✉️ Contacto
+¿Preguntas? Contáctame en:
+📧 tu-email@dominio.com
+🐦 @tu-twitter
